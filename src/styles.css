@@ -1,0 +1,55 @@
+:root {
+    --bg-color: #f4f1ea;
+    /* Beige / Paper */
+    --text-color: #2b2b2b;
+    /* Dark Gray / Ink */
+    --dim-color: #8c8c8c;
+    --highlight-color: #a52a2a;
+    /* Burnt Orange/Red for accents */
+    --font-stack: 'Courier New', Courier, monospace;
+    --glow: none;
+    /* No glow for paper look */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    margin: 0;
+    padding: 2rem;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+/* Optional: Paper texture overlay or grain could go here, 
+   but keeping it simple as requested "clean beige" */
+
+.scanline {
+    /* Removing scanline for the paper look, 
+       or we could make it very subtle grain */
+    display: none;
+}
+
+/* Scrollbar styling for paper theme */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    border-left: 1px solid var(--dim-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dim-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
